@@ -9,7 +9,6 @@ ensembl
 filters = listFilters(ensembl)
 filters
 
-#teste
 genes <- read.table("genes.txt", header = F)
 
 out <- getBM(attributes = c("hgnc_symbol", "chromosome_name", "band"),
@@ -17,4 +16,4 @@ out <- getBM(attributes = c("hgnc_symbol", "chromosome_name", "band"),
       mart       = ensembl
 )
 
-write.table ("out", file="out.txt", sep = "\t")
+write.table (out, file="out.txt", sep = "\t")
